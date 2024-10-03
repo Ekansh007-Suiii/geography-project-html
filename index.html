@@ -3,123 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>7-Day Portugal Tour Package</title>
+    <title>Epic Portugal Adventure</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
         header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #3498db, #8e44ad, #e74c3c);
+            animation: gradientBG 10s ease infinite;
         }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            color: white;
+            animation: glitch 1.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(5deg); }
+            40% { transform: skew(-5deg); }
+            60% { transform: skew(5deg); }
+            80% { transform: skew(-5deg); }
+            100% { transform: skew(0deg); }
+        }
+
+        @keyframes gradientBG {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
         .container {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
         }
-        h1, h2 {
-            color: #333;
+
+        section {
+            padding: 50px 0;
+            text-align: center;
         }
-        .package-info {
+
+        .section-1 {
+            background: #333;
             margin-bottom: 20px;
         }
-        .package-info p {
-            font-size: 18px;
-            line-height: 1.6;
+
+        .places {
+            padding: 20px;
+            background-color: #222;
+            margin-bottom: 20px;
+            border-radius: 10px;
         }
+
+        .places h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff7e5f;
+        }
+
+        .places p {
+            font-size: 1.2rem;
+        }
+
+        .section-2 {
+            background: #1abc9c;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
         .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #4CAF50;
+            font-size: 2rem;
+            color: #ff6347;
+            margin: 20px 0;
         }
+
         .book-button {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            padding: 15px 30px;
+            background-color: #ff6347;
             color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 18px;
-            margin-top: 20px;
-            border-radius: 5px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
             cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
-        #message {
-            display: none;
+
+        .book-button:hover {
+            background-color: #ff5230;
+            transform: scale(1.05);
+        }
+
+        .review-section {
+            padding: 40px 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .review-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .review {
+            margin-bottom: 20px;
+        }
+
+        .review p {
+            font-size: 1.1rem;
+        }
+
+        .review-form {
             margin-top: 20px;
-            font-size: 24px;
-            color: #333;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
         }
+
+        .review-form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .review-form button {
+            padding: 10px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
         footer {
-            background-color: #333;
-            color: white;
+            background: #000;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        a {
-            color: white;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>7-Day Portugal Tour Package</h1>
+        <h1>Epic Portugal Adventure</h1>
     </header>
 
     <div class="container">
-        <h2>Destinations and Hotels</h2>
-        <div class="package-info">
-            <p><strong>Day 1-2: Lisbon</strong></p>
-            <p>Stay at <strong>Altis Grand Hotel</strong></p>
-            <p><strong>Day 3-4: Porto</strong></p>
-            <p>Stay at <strong>Hotel Pestana Vintage Porto</strong></p>
-            <p><strong>Day 5: Douro Valley</strong></p>
-            <p>Stay at <strong>The Vintage House Hotel</strong></p>
-            <p><strong>Day 6-7: Sintra</strong></p>
-            <p>Stay at <strong>Tivoli Palácio de Seteais</strong></p>
+        <section class="section-1">
+            <h2>Tour Highlights & Accommodation</h2>
+            <div class="places">
+                <h3>Day 1-2: Lisbon</h3>
+                <p>Stay at Hotel Avenida Palace, explore Alfama district and Belem Tower.</p>
+            </div>
+            <div class="places">
+                <h3>Day 3-4: Porto</h3>
+                <p>Stay at Ribeira do Porto Hotel, famous for its wine cellars and river views.</p>
+            </div>
+            <div class="places">
+                <h3>Day 5: Douro Valley</h3>
+                <p>Stay at Quinta Nova Winery House, relax among the vineyards.</p>
+            </div>
+            <div class="places">
+                <h3>Day 6-7: Sintra</h3>
+                <p>Stay at Tivoli Palacio de Seteais, visit Pena Palace and Moorish Castle.</p>
+            </div>
+        </section>
+
+        <section class="section-2">
+            <h2>Transportation</h2>
+            <p><strong>Flight:</strong> Round-trip international flight from India to Portugal.</p>
+            <p><strong>Private Car:</strong> Dedicated car service for transfers between destinations.</p>
+            <p><strong>Train:</strong> Scenic train ride from Porto to Douro Valley along the river.</p>
+        </section>
+
+        <div class="review-section">
+            <h2>Reviews</h2>
+            <div id="reviews">
+                <div class="review">
+                    <p><strong>Siddhant:</strong> This trip was beyond amazing, highly recommend!</p>
+                </div>
+                <div class="review">
+                    <p><strong>Sajal:</strong> Breathtaking views and fantastic service throughout the journey.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Rajveer:</strong> Best trip of my life! Worth every penny.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Kiaan:</strong> Portugal is magical, and this tour was perfect to experience it.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Daksh:</strong> Unforgettable experience! The hotels were luxurious.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Jash:</strong> Smooth rides and excellent food. 5-star experience!</p>
+                </div>
+            </div>
+
+            <div class="review-form">
+                <textarea id="newReview" placeholder="Write your review here..."></textarea>
+                <button onclick="addReview()">Submit Review</button>
+            </div>
         </div>
 
-        <h2>Duration</h2>
-        <div class="package-info">
-            <p>7 Days / 6 Nights</p>
-        </div>
-
-        <h2>Total Package Price</h2>
-        <div class="package-info">
-            <p class="price">₹1,25,000 per person</p>
-        </div>
-
-        <!-- Book Now Button -->
-        <div class="book-button" onclick="showMessage()">Book Now</div>
-
-        <!-- Message that will appear after clicking Book Now -->
-        <div id="message">Just a dummy button for the project 😁</div>
+        <footer id="footer">
+            <h2>Book Now</h2>
+            <p class="price">₹1,35,000 per person</p>
+            <button class="book-button" onclick="showMessage()">Book This Adventure</button>
+            <p>&copy; 2024 Epic Trips. All rights reserved.</p>
+            <p>Email: <a href="mailto:ekanshpatil007@gmail.com" style="color: #ff6347;">ekanshpatil007@gmail.com</a></p>
+            <p>Contact: 9372120467</p>
+            <p>Made by Ekansh</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; Ekansh Travels and Tours</p>
-        <p>Email: <a href="mailto:ekanshpatil007@gmail.com">ekanshpatil007@gmail.com</a></p>
-        <p>Contact: 9372120467</p>
-        <p>Created by Ekansh Patil</p>
-    </footer>
 
     <script>
         function showMessage() {
-            var message = document.getElementById("message");
-            message.style.display = "block";
+            alert("Just a dummy button 😁");
+        }
+
+        function addReview() {
+            var newReview = document.getElementById("newReview").value;
+            if (newReview.trim() !== "") {
+                var reviewSection = document.getElementById("reviews");
+                var newReviewElement = document.createElement("div");
+                newReviewElement.classList.add("review");
+                newReviewElement.innerHTML = <p><strong>You:</strong> ${newReview}</p>;
+                reviewSection.appendChild(newReviewElement);
+                document.getElementById("newReview").value = ""; // Clear input
+            }
         }
     </script>
 
